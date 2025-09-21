@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>📚 Smart Study Planner</h1>
+        <p>Organize your study tasks, track progress, and boost productivity!</p>
+    </header>
+
+    <main>
+        <!-- Add Task Section -->
+        <section class="add-task">
+            <h2>Add New Task</h2>
+            <div class="input-group">
+                <input type="text" id="taskTitle" placeholder="Task Title">
+                <input type="text" id="taskSubject" placeholder="Subject">
+                <input type="date" id="taskDate">
+                <select id="taskPriority">
+                    <option value="Low">Low Priority</option>
+                    <option value="Medium">Medium Priority</option>
+                    <option value="High">High Priority</option>
+                </select>
+                <button id="addTaskBtn">Add Task</button>
+            </div>
+        </section>
+
+        <!-- Progress Bar -->
+        <section class="progress-section">
+            <h2>Task Completion Progress</h2>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <p id="progress-text">0% Completed</p>
+        </section>
+
+        <!-- Task List Section -->
+        <section class="task-list">
+            <h2>Your Tasks</h2>
+            <ul id="tasks"></ul>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="timeline-section">
+            <h2>Task Timeline</h2>
+            <ul id="timeline"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Smart Study Planner &copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

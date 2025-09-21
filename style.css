@@ -1,0 +1,187 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f7f9;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Main Section */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Add Task Section */
+.add-task, .task-list, .timeline-section, .progress-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.input-group button {
+    width: 100%;
+    padding: 0.8rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-group button:hover {
+    background: #764ba2;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    background: #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 24px;
+    margin-bottom: 0.5rem;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: width 0.5s;
+}
+
+/* Task List */
+.task-list ul, .timeline-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    background: #f9f9f9;
+    transition: 0.3s;
+}
+
+.task-card:hover {
+    background: #e6f7ff;
+}
+
+.task-card span {
+    font-size: 1rem;
+}
+
+.high-priority span {
+    color: #ff4d4f;
+    font-weight: 600;
+}
+
+.completed span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.task-card button {
+    margin-left: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.task-card button:nth-child(1) {
+    background: #52c41a;
+    color: white;
+}
+
+.task-card button:nth-child(1):hover {
+    background: #389e0d;
+}
+
+.task-card button:nth-child(2) {
+    background: #ff4d4f;
+    color: white;
+}
+
+.task-card button:nth-child(2):hover {
+    background: #cf1322;
+}
+
+/* Timeline Section */
+.timeline-section ul li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #667eea;
+    background: #f0f4ff;
+    border-radius: 8px;
+    position: relative;
+}
+
+.timeline-section ul li::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    background: #667eea;
+    border-radius: 50%;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #667eea;
+    color: white;
+    margin-top: 2rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px){
+    .task-card { flex-direction: column; align-items: flex-start; }
+    .task-card button { margin: 0.3rem 0 0 0; }
+}
